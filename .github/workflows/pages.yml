@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Build wiki
-        run: python build.py --no-open
+        run: python tools/build.py --no-open
 
       - name: Stage site
         run: |

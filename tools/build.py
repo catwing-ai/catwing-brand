@@ -2,7 +2,7 @@
 
 Usage:
     cd <repo>
-    python build.py [--fresh-fonts] [--no-open]
+    python tools/build.py [--fresh-fonts] [--no-open]
 
 Outputs:
     index.html       Home page (wiki landing)
@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 
 VERSION = "2.0"
-BRAND_DIR = Path(__file__).resolve().parent
+BRAND_DIR = Path(__file__).resolve().parents[1]
 PAGES = {
     "home": BRAND_DIR / "index.html",
     "brand": BRAND_DIR / "brand.html",
@@ -2112,10 +2112,10 @@ CW_DARK = RGBColor(0x33, 0x33, 0x33)</code></pre>
 }}</code></pre>
 
       <h3>Build</h3>
-      <pre><code>cd &lt;repo&gt;/docs/brand
-python build.py                # Build and open in browser
-python build.py --no-open      # Build without opening
-python build.py --fresh-fonts  # Re-download fonts</code></pre>
+      <pre><code>cd &lt;repo&gt;/catwing-brand
+python tools/build.py                # Build and open in browser
+python tools/build.py --no-open      # Build without opening
+python tools/build.py --fresh-fonts  # Re-download fonts</code></pre>
 
       <h3>Logo Assets</h3>
       <pre><code>brand/logo/                       # All logo variants
@@ -2133,7 +2133,7 @@ python build.py --fresh-fonts  # Re-download fonts</code></pre>
       and CSS implementation details, see the <a href="design.html">UI &amp; App Design Guide</a>.</p>
 
       <h3>Version</h3>
-      <p class="note">v{VERSION} &middot; Generated {today} by <code>brand/build.py</code></p>
+      <p class="note">v{VERSION} &middot; Generated {today} by <code>tools/build.py</code></p>
     </section>"""
 
 
@@ -2645,8 +2645,8 @@ def _build_page(
         f'    <a href="#{id_}">{label}</a>' for id_, label in nav_items
     )
 
-    css_file = BRAND_DIR / "style.css"
-    js_file = BRAND_DIR / "script.js"
+    css_file = BRAND_DIR / "src" / "style.css"
+    js_file = BRAND_DIR / "src" / "script.js"
     guide_css = css_file.read_text(encoding="utf-8") if css_file.exists() else ""
     guide_js = js_file.read_text(encoding="utf-8") if js_file.exists() else ""
 

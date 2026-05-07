@@ -1,0 +1,20 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sync-skills
+        name: .agents/skills -> .claude/skills mirror
+        entry: python -B tools/hooks/sync_skills.py
+        language: system
+        pass_filenames: false
+        files: ^\.(agents|claude)/skills/
+      - id: skills-parity-guard
+        # Always-on guard. The sync-skills hook above only runs when files
+        # under .agents/skills/ or .claude/skills/ change. This guard catches
+        # drift from any other source (manual edits in another tool, partial
+        # revert, escape-hatch leftover, mode-bit drift) on EVERY commit.
+        # Read-only: fails the commit on drift, does NOT auto-resync.
+        name: .agents/skills <-> .claude/skills parity guard
+        entry: python -B tools/hooks/check_skills_parity.py
+        language: system
+        pass_filenames: false
+        always_run: true
