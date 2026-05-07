@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../logo/catwing_full_300.png" alt="CatWing logo" width="100" />
+  <img src="https://raw.githubusercontent.com/CatWing-repo/catwing-brand/main/logo/catwing_icon_128.png" alt="CatWing logo" width="96" />
 </p>
 
 <h1 align="center">Catwing Brand</h1>
