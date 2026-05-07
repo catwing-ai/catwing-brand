@@ -39,13 +39,3 @@ Outputs land at the repo root and are gitignored. Each page embeds all fonts and
 
 - `brand-check` — lint a UI surface for off-brand colors, typography, logo misuse
 - `brand-asset` — inline color tokens + logo path reference for agent context
-
-## 📚 Contract
-
-See [AGENTS.md](../AGENTS.md) for the full contract (rules for agents, asset coupling, verification).
-
-## 🔗 Sibling Repos
-
-- [`catwing`](../../catwing) — main app + pipeline
-- [`catwing-agent-infra`](../../catwing-agent-infra) — agent tooling, installers, plugin packaging
-- [`catwing-rtk`](../../catwing-rtk) — Rust Token Killer source

@@ -47,3 +47,32 @@ python tools/build.py --fresh-fonts    # force re-download of Google Fonts
 
 - The wiki's `_load_fonts()` step downloads from Google Fonts on first build and caches under `.fonts/`. Offline-only environments should commit a populated `.fonts/` once or vendor the woff2 files explicitly. (Currently gitignored.)
 - `src/style.css` and `tools/build.py` both encode color values; the brand guide is the source of truth, but a stylesheet change without a `tools/build.py::COLORS` update will silently diverge. A future check should diff the two.
+
+## Engineering Principles
+
+- **DRY** — flag repetition aggressively. **Well-tested** — too many > too few. **Engineered enough** — not fragile, not over-abstracted.
+- **Skeptical conclusions:** review every finding for gaps, weaknesses, edge cases; validate hypotheses with evidence or experiments.
+- **Skeptical plans:** review each initial plan before presenting; fix weak assumptions, missed branches, unresolved dependencies, and missing verification.
+- **Plan mode for non-trivial tasks**; unresolved design choices are blocking — interview branch-by-branch, recommend an answer per question.
+- **Boy Scout Rule** — files >400 lines: split. Keep AGENTS.md and per-section comments current on structural changes.
+
+## Conventions
+
+- **Self-explanatory names** — no single letters (except `i`, `x/y` math), no unexplained abbreviations.
+- **Imports at top** — no local imports unless circular/bootstrap; mark with reason if unavoidable.
+- **Commits:** No `Co-Authored-By` trailers. Short body (1–2 lines, "why" not "what"). Trivial = no lifecycle tags; non-trivial may append `[PLANNED]` `[CLEANIFIED]` `[TESTIFIED]` to the title.
+
+## Agent Discipline (Token Budget)
+
+- **Dual-agent support:** hooks, skills, and agent docs must keep Claude Code and Codex working; canonical lives at `.agents/skills/`, mirror at `.claude/skills/`.
+- **Minimal outputs:** Lead with result, changed files, verification, blockers. No fluff, no praise, no request recap, no generic caveats. Ask only blocking questions; otherwise act.
+- **LSP first** for code navigation/search/analysis/rename. Use `find_workspace_symbols`, `find_references`, `find_definition`, `get_hover` before falling back to grep. After one empty lookup, switch to anchored grep — don't retry blindly.
+- **Direct tools first** — Glob/Grep/Read for 1–3 text queries. Each `Agent` spawn ≈ 8.5K tokens overhead; batch searches and parallelize only for genuinely independent work.
+- **Surgical reads/prompts** — exact paths + line windows; never spawn an agent for one file. Bound unknown >8 KB files with `offset`/`limit`. Skip verify-Read after a successful Edit (Edit errors loudly on failure).
+- **Plan mode — skip Phase 1 Explore agents** when answerable in ≤3 direct tool calls. Zero Explore agents is valid.
+- **Compress large agent outputs** (>2k tokens prose) via `mcp__headroom__headroom_compress`. Skip for short structured outputs.
+
+## File & Folder Limits
+
+- Source warn/block 300/500 lines · `AGENTS.md` ≤150 lines · ≤10 files per directory.
+- No new repo-root files/folders if a subdir can hold them. Prefer extending `tools/`, `src/`, `docs/`, or `.agents/` over adding siblings.
