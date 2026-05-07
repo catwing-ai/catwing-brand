@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../logo/catwing_full_300.png" alt="CatWing logo" width="100" />
+</p>
+
 <h1 align="center">Catwing Brand</h1>
 
 <p align="center">Canonical CatWing brand identity — colors, typography, logo variants, iconography, voice, components, interaction patterns. Built as four self-contained HTML pages.</p>
@@ -10,6 +14,7 @@ GitHub Pages: **https://catwing-repo.github.io/catwing-brand/** (deployed on eve
 - `brand.html` — Brand Identity Guide
 - `design.html` — UI & App Design Guide
 - `resources.html` — Templates & downloads
+- `tokens.json`, `tokens.css` — machine-readable token export (for cross-repo agents and Tailwind/CSS-var configs)
 
 ## 🛠️ Build Locally
 
@@ -35,7 +40,22 @@ Outputs land at the repo root and are gitignored. Each page embeds all fonts and
 | `.claude/skills/` | Mirror of `.agents/skills/` (auto-synced; never edit directly) |
 | `.github/workflows/pages.yml` | CI build + deploy to GitHub Pages |
 
-## 🤖 Skills
+## 🤖 For Agents
 
-- `brand-check` — lint a UI surface for off-brand colors, typography, logo misuse
-- `brand-asset` — inline color tokens + logo path reference for agent context
+Start with [`AGENTS.md`](../AGENTS.md) — repo rules, build flow, file/folder limits, cross-repo consumption.
+
+**Token lookup recipe** (any sibling repo / agent context):
+
+```bash
+# Programmatic — fetch the latest published tokens
+curl -fsSL https://catwing-repo.github.io/catwing-brand/tokens.json
+curl -fsSL https://catwing-repo.github.io/catwing-brand/tokens.css
+
+# Human-readable — open the brand guide
+open https://catwing-repo.github.io/catwing-brand/brand.html
+```
+
+**Skills** (canonical at [`.agents/skills/`](../.agents/skills/), mirrored to `.claude/skills/`):
+
+- [`brand-check`](../.agents/skills/brand-check/SKILL.md) — lint a UI surface for off-brand colors, typography, logo misuse
+- [`brand-asset`](../.agents/skills/brand-asset/SKILL.md) — inline color tokens, font stacks, logo paths for agent context
