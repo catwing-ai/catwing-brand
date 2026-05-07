@@ -1,0 +1,9 @@
+__pycache__/
+.fonts/
+logo/fonts/
+
+# Compiled wiki outputs (rebuilt by CI / `python build.py`)
+index.html
+brand.html
+design.html
+resources.html
