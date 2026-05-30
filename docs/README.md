@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CatWing-repo/catwing-brand/main/logo/catwing_icon_128.png" alt="CatWing logo" width="96" />
+  <img src="https://raw.githubusercontent.com/catwing-ai/catwing-brand/main/logo/catwing_icon_128.png" alt="CatWing logo" width="96" />
 </p>
 
 <h1 align="center">Catwing Brand</h1>
@@ -8,7 +8,9 @@
 
 ## 🌐 View Online
 
-GitHub Pages: **https://catwing-repo.github.io/catwing-brand/** (deployed on every push to `main` via `.github/workflows/pages.yml`).
+GitHub Pages: **https://catwing-ai.github.io/catwing-brand/** (deployed on every push to `main` via `.github/workflows/pages.yml`).
+
+Published for reference; no open-source license is granted.
 
 - `index.html` — Wiki landing
 - `brand.html` — Brand Identity Guide
@@ -48,11 +50,11 @@ Start with [`AGENTS.md`](../AGENTS.md) — repo rules, build flow, file/folder l
 
 ```bash
 # Programmatic — fetch the latest published tokens
-curl -fsSL https://catwing-repo.github.io/catwing-brand/tokens.json
-curl -fsSL https://catwing-repo.github.io/catwing-brand/tokens.css
+curl -fsSL https://catwing-ai.github.io/catwing-brand/tokens.json
+curl -fsSL https://catwing-ai.github.io/catwing-brand/tokens.css
 
 # Human-readable — open the brand guide
-open https://catwing-repo.github.io/catwing-brand/brand.html
+open https://catwing-ai.github.io/catwing-brand/brand.html
 ```
 
 **Skills** (canonical at [`.agents/skills/`](../.agents/skills/), mirrored to `.claude/skills/`):

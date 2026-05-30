@@ -23,8 +23,8 @@ CatWing brand identity: source-of-truth for colors, typography, logo variants, i
 Sibling repos (`catwing/`, `catwing-app/`, `catwing-rest-api/`) and agents working in them must **never** re-derive token values by reading `tools/build.py`, `src/style.css`, or `brand.html`. Use one of these in priority order:
 
 1. **Fetch published tokens** (preferred — always fresh, version-stamped):
-   - `https://catwing-repo.github.io/catwing-brand/tokens.json` — full structured export
-   - `https://catwing-repo.github.io/catwing-brand/tokens.css` — flat `--cw-*` custom properties
+   - `https://catwing-ai.github.io/catwing-brand/tokens.json` — full structured export
+   - `https://catwing-ai.github.io/catwing-brand/tokens.css` — flat `--cw-*` custom properties
 2. **Skill lookup** for one-off questions: invoke the `brand-asset` skill (mirrored into each agent runtime).
 3. **Copy-on-bump** if the consumer needs a vendored copy: copy `tokens.json` into the consumer repo, record the source `version` field, and re-copy when this repo's `VERSION` changes.
 
