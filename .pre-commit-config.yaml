@@ -18,3 +18,13 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+      - id: token-parity-guard
+        # Ratchet: every hex literal in src/style.css must be registered in
+        # tools/build.py (COLORS / TINTS / GRADIENTS / context palettes), or
+        # be a pre-existing orphan in BASELINE_ORPHANS. Blocks NEW drift, lets
+        # legacy debt retire one entry at a time.
+        name: src/style.css <-> tools/build.py token parity
+        entry: python -B tools/hooks/check_token_parity.py
+        language: system
+        pass_filenames: false
+        files: ^(src/style\.css|tools/build\.py|tools/hooks/check_token_parity\.py)$

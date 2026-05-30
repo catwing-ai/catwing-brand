@@ -15,6 +15,7 @@ CatWing brand identity: source-of-truth for colors, typography, logo variants, i
 | `.claude/skills/` | Auto-generated mirror of `.agents/skills/` — never edit directly |
 | `tools/hooks/sync_skills.py` | Mirrors `.agents/skills/` → `.claude/skills/`; rejects direct edits to the mirror |
 | `tools/hooks/check_skills_parity.py` | Always-on guard: fails commit if the two trees drift |
+| `tools/hooks/check_token_parity.py` | Ratchet: blocks NEW hex literals in `src/style.css` not registered in `tools/build.py::COLORS` |
 | `.github/workflows/pages.yml` | Builds + deploys the four HTML pages to GitHub Pages on push to `main` |
 
 ## Cross-repo consumption (for sibling agents)
@@ -28,6 +29,16 @@ Sibling repos (`catwing/`, `catwing-app/`, `catwing-rest-api/`) and agents worki
 3. **Copy-on-bump** if the consumer needs a vendored copy: copy `tokens.json` into the consumer repo, record the source `version` field, and re-copy when this repo's `VERSION` changes.
 
 Brand decisions (adding a color, picking a new font) only happen here — propose in a PR against `tools/build.py::COLORS` / `FONTS`, never in a consumer repo.
+
+### VERSION bump rule (tokens.json `version` field)
+
+`VERSION` in `tools/build.py` semver-tracks the published token contract:
+
+- **Patch** (`2.0` → `2.0.1`): typo fix, role/note copy edit, no value or key changes
+- **Minor** (`2.0` → `2.1`): added a key — new `COLORS` entry, new `FONTS` role, new `TINTS`/`GRADIENTS`, new `LOGO_DIR_KEYS` slot. Backwards-compatible for consumers
+- **Major** (`2.0` → `3.0`): renamed/removed a key, changed a hex value, changed a font stack, renamed a logo asset. Breaking — consumers vendoring `tokens.json` must re-vendor
+
+Bump in the same commit as the change. Mention the bump in the commit body.
 
 ## Rules
 
@@ -58,7 +69,7 @@ python tools/build.py --fresh-fonts    # force re-download of Google Fonts
 ## Known drift
 
 - The wiki's `_load_fonts()` step downloads from Google Fonts on first build and caches under `.fonts/`. Offline-only environments should commit a populated `.fonts/` once or vendor the woff2 files explicitly. (Currently gitignored.)
-- `src/style.css` and `tools/build.py` both encode color values; the brand guide is the source of truth, but a stylesheet change without a `tools/build.py::COLORS` update will silently diverge. A future check should diff the two.
+- `src/style.css` carries ~50 hex literals not yet promoted to `tools/build.py::COLORS` — wiki chrome, dark-theme, code-block colors. Tracked in `tools/hooks/check_token_parity.py::BASELINE_ORPHANS`. The hook ratchets: NEW drift blocks commits; retire entries by promoting the value to `COLORS` and deleting it from the baseline.
 
 ## Engineering Principles
 
