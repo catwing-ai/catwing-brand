@@ -1,4 +1,4 @@
-"""Build the CatWing Documentation Wiki as self-contained HTML pages.
+"""Build the Catwing Documentation Wiki as self-contained HTML pages.
 
 Usage:
     cd <repo>
@@ -347,7 +347,7 @@ def _fetch_and_embed_fonts(fresh: bool = False) -> str:
 def _sec_cover(assets: dict) -> str:
     logo_img = ""
     if assets["icon"]:
-        logo_img = f'<img src="{assets["icon"]}" alt="CatWing" class="hero-logo">'
+        logo_img = f'<img src="{assets["icon"]}" alt="Catwing" class="hero-logo">'
     else:
         logo_img = '<div class="hero-logo-placeholder">CW</div>'
 
@@ -355,7 +355,7 @@ def _sec_cover(assets: dict) -> str:
     <section id="cover" class="hero">
       <div class="hero-inner">
         {logo_img}
-        <h1>CatWing</h1>
+        <h1>Catwing</h1>
         <p class="hero-tagline">Deep-tech AI for Supply Chain Optimization</p>
         <p class="hero-sub">Brand Identity Guidelines &mdash; v{VERSION} &middot; {date.today().strftime("%B %Y")}</p>
       </div>
@@ -368,7 +368,7 @@ def _sec_philosophy() -> str:
       <h2>2. Brand Philosophy</h2>
 
       <h3>Core Positioning</h3>
-      <p><strong>CatWing is the infrastructure layer for intelligent inventory.</strong>
+      <p><strong>Catwing is the infrastructure layer for intelligent inventory.</strong>
       We transform raw supply chain data into precise, actionable decisions.
       Every pixel in our interface exists to help analysts make better choices faster.</p>
 
@@ -409,7 +409,7 @@ def _sec_philosophy() -> str:
       <h3>This, Not That</h3>
       <div class="this-not-that">
         <div class="tnt-col this">
-          <h4>CatWing is&hellip;</h4>
+          <h4>Catwing is&hellip;</h4>
           <ul>
             <li>Deep-tech AI for supply chain professionals</li>
             <li>Information-dense, data-first interfaces</li>
@@ -418,7 +418,7 @@ def _sec_philosophy() -> str:
           </ul>
         </div>
         <div class="tnt-col that">
-          <h4>CatWing is NOT&hellip;</h4>
+          <h4>Catwing is NOT&hellip;</h4>
           <ul>
             <li>Generic SaaS with playful illustrations</li>
             <li>Card-heavy dashboards with vanity metrics</li>
@@ -607,7 +607,7 @@ def _sec_logos(assets: dict) -> str:
       <h2>3. Logo System</h2>
 
       <h3>Icon Mark</h3>
-      <p>The wing icon is the <strong>primary visual mark</strong> for CatWing.</p>
+      <p>The wing icon is the <strong>primary visual mark</strong> for Catwing.</p>
       <div class="logo-grid">
         {icon_cards}
       </div>
@@ -619,7 +619,7 @@ def _sec_logos(assets: dict) -> str:
 
       <h3>Construction Rules</h3>
       <ul>
-        <li><strong>Typeface:</strong> Outfit Bold (700), PascalCase &ldquo;CatWing&rdquo;, letter-spacing 4px at 100pt</li>
+        <li><strong>Typeface:</strong> Outfit Bold (700), PascalCase &ldquo;Catwing&rdquo;, letter-spacing 4px at 100pt</li>
         <li><strong>Clear space:</strong> Minimum = height of the &ldquo;C&rdquo; character on all sides</li>
         <li><strong>Minimum sizes:</strong> Icon 32px, horizontal lockup 120px width</li>
         <li><strong>Light text color:</strong> Charcoal #1a1a2e</li>
@@ -956,7 +956,7 @@ def _sec_voice() -> str:
           <tr><td>UI copy</td><td>Sentence case</td><td>Changes saved</td></tr>
           <tr><td>Section headers</td><td>Title Case</td><td>Global Assortment Review</td></tr>
           <tr><td>Badges / labels</td><td>UPPERCASE</td><td>STOCK, LAUNCH, DISC.</td></tr>
-          <tr><td>Brand name</td><td>PascalCase</td><td>CatWing (never Catwing or CATWING)</td></tr>
+          <tr><td>Brand name</td><td>PascalCase</td><td>Catwing (never Catwing or CATWING)</td></tr>
         </tbody>
       </table>
 
@@ -1917,7 +1917,7 @@ def _sec_examples(assets: dict) -> str:
       <div class="mockup-frame">
       <div class="example-webapp">
         <div class="ew-sidebar">
-          <div class="ew-brand">{logo_img} <strong>CatWing</strong></div>
+          <div class="ew-brand">{logo_img} <strong>Catwing</strong></div>
           <div class="ew-filter">Brand</div>
           <div class="ew-filter">Status</div>
           <div class="ew-filter active">Tissot</div>
@@ -1958,7 +1958,7 @@ def _sec_examples(assets: dict) -> str:
           {logo_img}
           <div>
             <strong>Jane Smith</strong><br>
-            <span class="ee-meta">Supply Chain Analyst &middot; CatWing</span><br>
+            <span class="ee-meta">Supply Chain Analyst &middot; Catwing</span><br>
             <span class="ee-contact">jane@catwing.ai &middot; +31 6 1234 5678</span>
           </div>
         </div>
@@ -1974,7 +1974,7 @@ def _sec_examples(assets: dict) -> str:
 
       <h3>Terminal / CLI Output</h3>
       <div class="example-terminal">
-        <span class="term-muted">[2026-03-08 14:23:01]</span> <span class="term-blue">CatWing Pipeline v3.2</span><br>
+        <span class="term-muted">[2026-03-08 14:23:01]</span> <span class="term-blue">Catwing Pipeline v3.2</span><br>
         <span class="term-muted">[2026-03-08 14:23:02]</span> Stage 1: Extract <span class="term-green">OK</span> (1.2s)<br>
         <span class="term-muted">[2026-03-08 14:23:05]</span> Stage 2: Transform &amp; Load <span class="term-green">OK</span> (3.1s)<br>
         <span class="term-muted">[2026-03-08 14:23:12]</span> Stage 3: Enrichment <span class="term-green">OK</span> (7.4s)<br>
@@ -2104,7 +2104,7 @@ def _sec_ui_intro() -> str:
     <section id="ui-intro" class="hero" style="min-height:auto;padding:3rem 2rem">
       <div class="hero-inner" style="gap:0.8rem">
         <h1 style="font-size:2rem">UI &amp; App Design Guide</h1>
-        <p class="hero-tagline" style="font-size:1rem">Implementation-specific design rules for CatWing interfaces</p>
+        <p class="hero-tagline" style="font-size:1rem">Implementation-specific design rules for Catwing interfaces</p>
         <p class="hero-sub">For core brand identity, see the <a href="brand.html" style="color:#fff;text-decoration:underline">Brand Identity Guide</a></p>
       </div>
     </section>
@@ -2112,7 +2112,7 @@ def _sec_ui_intro() -> str:
     <section id="ui-contexts">
       <h2>1. Design Contexts</h2>
 
-      <p>CatWing interfaces serve two distinct purposes, each requiring different visual treatment.</p>
+      <p>Catwing interfaces serve two distinct purposes, each requiring different visual treatment.</p>
 
       <div class="side-by-side">
         <div class="context-card context-card-dark">
@@ -2162,7 +2162,7 @@ def _sec_ui_palettes() -> str:
     <section id="ui-palettes">
       <h2>2. Color Palettes by Context</h2>
 
-      <p>The <a href="brand.html">Brand Guide</a> defines the canonical CatWing palette.
+      <p>The <a href="brand.html">Brand Guide</a> defines the canonical Catwing palette.
       Below are the <strong>context-specific adaptations</strong> for each deployment type.</p>
 
       <h3>Header Treatment</h3>
@@ -2413,13 +2413,13 @@ def _sec_home(assets: dict) -> str:
     """Home page hero and card navigation."""
     logo_img = ""
     if assets.get("icon"):
-        logo_img = f'<img src="{assets["icon"]}" alt="CatWing" class="home-logo">'
+        logo_img = f'<img src="{assets["icon"]}" alt="Catwing" class="home-logo">'
 
     return f"""
     <div class="home-hero">
       <div class="home-hero-inner">
         {logo_img}
-        <h1>CatWing</h1>
+        <h1>Catwing</h1>
         <p>Brand &amp; Design Documentation</p>
       </div>
     </div>
@@ -2646,7 +2646,7 @@ def _build_page(
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatWing &mdash; {title}</title>
+  <title>Catwing &mdash; {title}</title>
   {favicon_link}
   {font_fallback}
   <style>
@@ -2657,7 +2657,7 @@ def _build_page(
 <body>
   <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
   <nav class="guide-nav">
-    <h2>CatWing</h2>
+    <h2>Catwing</h2>
 {nav_content}
     <div class="theme-toggle-wrap">
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">&#9790; Dark</button>
@@ -2810,7 +2810,7 @@ def _export_tokens() -> tuple[Path, Path]:
     json_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
     css_lines = [
-        "/* CatWing brand tokens — generated by tools/build.py. Do not edit. */",
+        "/* Catwing brand tokens — generated by tools/build.py. Do not edit. */",
         f"/* version {VERSION} · generated {payload['generated_at']} */",
         ":root {",
     ]
@@ -2836,7 +2836,7 @@ def _export_tokens() -> tuple[Path, Path]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build CatWing Documentation Wiki")
+    parser = argparse.ArgumentParser(description="Build Catwing Documentation Wiki")
     parser.add_argument(
         "--fresh-fonts", action="store_true", help="Re-download fonts from Google"
     )
@@ -2845,7 +2845,7 @@ def main():
     )
     args = parser.parse_args()
 
-    print(f"Building CatWing Documentation v{VERSION}...")
+    print(f"Building Catwing Documentation v{VERSION}...")
     print()
 
     print("Loading assets:")

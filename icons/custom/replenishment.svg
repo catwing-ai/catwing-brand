@@ -1,2 +1,2 @@
-<!-- CatWing custom glyph "replenishment" — lucide 24px grid, 2px stroke, round cap/join. -->
+<!-- Catwing custom glyph "replenishment" — lucide 24px grid, 2px stroke, round cap/join. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V7a2 2 0 0 1 2-2h9"/><path d="m13 3 2 2-2 2"/><path d="M20 15v2a2 2 0 0 1-2 2H9"/><path d="m11 21-2-2 2-2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>

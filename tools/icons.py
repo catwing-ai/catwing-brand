@@ -1,9 +1,9 @@
-"""CatWing icon system: registry loader plus every published emitter.
+"""Catwing icon system: registry loader plus every published emitter.
 
 Source of truth:
     icons/registry.json    role -> glyph, category, keywords, never_means
     icons/lucide/*.svg     vendored lucide sources (pinned, never hand-edited)
-    icons/custom/*.svg     CatWing domain glyphs drawn on lucide's 24px grid
+    icons/custom/*.svg     Catwing domain glyphs drawn on lucide's 24px grid
 
 Emitted into icons/dist/ (gitignored, rebuilt on every build):
     svg/<role>.svg                 one optimized file per role
@@ -225,12 +225,12 @@ def gallery_section(registry: dict, bodies: dict[str, str]) -> str:
     <section id="iconography">
       <h2>6. Iconography</h2>
 
-      <p>CatWing ships <strong>{len(registry["roles"])} icons</strong>, each bound to exactly one
+      <p>Catwing ships <strong>{len(registry["roles"])} icons</strong>, each bound to exactly one
       semantic <strong>role</strong>. Roles are the public name; the underlying glyph is an
       implementation detail. A glyph may never carry two meanings &mdash; that is what lets a user
       learn the vocabulary once and read it everywhere.</p>
 
-      <p class="note">Base set: lucide {registry["lucide_version"]} (ISC), plus CatWing domain glyphs
+      <p class="note">Base set: lucide {registry["lucide_version"]} (ISC), plus Catwing domain glyphs
       drawn on the same 24&nbsp;px grid at 2&nbsp;px stroke with round caps and joins.
       Consume from <code>@catwing/icons</code> in React, or
       <code>icons/dist/sprite.svg</code> + <code>icons/dist/icons.json</code> anywhere else.
