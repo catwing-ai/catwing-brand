@@ -24,7 +24,7 @@ from pathlib import Path
 
 import icons
 
-VERSION = "2.3"
+VERSION = "3.0"
 BRAND_DIR = Path(__file__).resolve().parents[1]
 PAGES = {
     "home": BRAND_DIR / "index.html",

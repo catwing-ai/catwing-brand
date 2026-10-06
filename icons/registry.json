@@ -1,5 +1,5 @@
 {
-  "version": "2.4",
+  "version": "3.0",
   "lucide_version": "0.468.0",
   "roles": {
     "abcClass": {
@@ -824,7 +824,7 @@
       ],
       "never_means": "any other role in this registry — one glyph carries exactly one meaning"
     },
-    "forecastUplift": {
+    "forecastPerformance": {
       "glyph": "forecast-uplift",
       "source": "custom/forecast-uplift.svg",
       "category": "domain",
@@ -1523,6 +1523,18 @@
       ],
       "never_means": "any other role in this registry — one glyph carries exactly one meaning"
     },
+    "requestOrder": {
+      "glyph": "request-order",
+      "source": "custom/request-order.svg",
+      "category": "entity",
+      "keywords": [
+        "request",
+        "order",
+        "document",
+        "question"
+      ],
+      "never_means": "a purchase order (that is `purchaseOrder`) — a request is an ask, not a committed order"
+    },
     "retry": {
       "glyph": "rotate-cw",
       "source": "lucide/rotate-cw.svg",
@@ -2098,7 +2110,7 @@
         "up",
         "trending"
       ],
-      "never_means": "a forecast uplift adjustment (that is `forecastUplift`)"
+      "never_means": "a forecast uplift adjustment (that is `forecastPerformance`)"
     },
     "undo": {
       "glyph": "rotate-ccw",
