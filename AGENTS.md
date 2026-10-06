@@ -1,6 +1,6 @@
 # AGENTS.md
 
-CatWing brand identity: source-of-truth for colors, typography, logo variants, iconography, voice, components, interaction patterns. Consumed by humans (designers, marketing) and agents (Claude Code, Codex) building UI in the CatWing repos.
+Catwing brand identity: source-of-truth for colors, typography, logo variants, iconography, voice, components, interaction patterns. Consumed by humans (designers, marketing) and agents (Claude Code, Codex) building UI in the Catwing repos.
 
 ## What lives here
 
@@ -8,7 +8,7 @@ CatWing brand identity: source-of-truth for colors, typography, logo variants, i
 |------|---------|
 | `tools/build.py` | Compiles `index.html`, `brand.html`, `design.html`, `resources.html` (self-contained, base64-embedded fonts + logos) and emits `tokens.json` + `tokens.css` for cross-repo agent consumption |
 | `icons/registry.json` | **Icon source of truth.** `role -> {glyph, source, category, keywords, never_means}`. One glyph carries exactly one role — the loader raises on a duplicate |
-| `icons/lucide/`, `icons/custom/` | Glyph files. `lucide/` is vendored (pinned version, never hand-edited); `custom/` is CatWing domain glyphs drawn on lucide's 24px / 2px-stroke / round-cap grid |
+| `icons/lucide/`, `icons/custom/` | Glyph files. `lucide/` is vendored (pinned version, never hand-edited); `custom/` is Catwing domain glyphs drawn on lucide's 24px / 2px-stroke / round-cap grid |
 | `tools/icons.py` | Registry loader + every icon emitter; called by `tools/build.py::_sec_iconography` |
 | `icons/dist/` | Gitignored build output: `svg/`, `sprite.svg`, `icons.json`, `png/`, `react/*.gen.ts` |
 | `src/style.css`, `src/script.js` | Wiki page styling + interaction (search, theme toggle) |

@@ -1,8 +1,8 @@
 """
-Phase 1: Generate a visual sample sheet for CatWing logo wordmark.
+Phase 1: Generate a visual sample sheet for Catwing logo wordmark.
 
 Shows 12 distinctive Google Fonts, each in 3 light-bg colors + 1 dark-bg = 4 columns.
-Casing fixed to "CatWing" (PascalCase).
+Casing fixed to "Catwing" (PascalCase).
 
 Usage:
     cd D:/_projects/__CAT_WING/logo
@@ -25,7 +25,7 @@ FONTS_DIR = SCRIPT_DIR / "fonts"
 SOURCE_IMG = SCRIPT_DIR / "catwing_logo_1200x1200.png"
 OUTPUT_FILE = SCRIPT_DIR / "samples.png"
 
-TEXT = "CatWing"
+TEXT = "Catwing"
 
 BG_LIGHT = "#ffffff"
 BG_DARK = "#0f1923"
@@ -264,10 +264,10 @@ def main():
         title_font = ImageFont.load_default()
         subtitle_font = ImageFont.load_default()
 
-    draw.text((cat_x + cat_size + 30, cat_y + 20), "CatWing Logo — Font Samples", font=title_font, fill="#1a1a2e")
+    draw.text((cat_x + cat_size + 30, cat_y + 20), "Catwing Logo — Font Samples", font=title_font, fill="#1a1a2e")
     draw.text(
         (cat_x + cat_size + 30, cat_y + 70),
-        'Casing: "CatWing" (PascalCase)  |  Pick your font + color combo',
+        'Casing: "Catwing" (PascalCase)  |  Pick your font + color combo',
         font=subtitle_font, fill="#555555",
     )
     draw.text(

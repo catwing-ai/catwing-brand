@@ -1,10 +1,10 @@
 ---
 name: brand-asset
-description: Inline reference for CatWing brand tokens — colors, typography, logo paths, voice — for agents building or reviewing UI. Use to look up canonical hex values, font stacks, or logo asset filenames without re-reading the brand guide HTML.
+description: Inline reference for Catwing brand tokens — colors, typography, logo paths, voice — for agents building or reviewing UI. Use to look up canonical hex values, font stacks, or logo asset filenames without re-reading the brand guide HTML.
 effort: low
 ---
 
-You are answering an agent's question about CatWing brand tokens. Give them the canonical value and the source-of-truth path; do not invent values, do not fall back to memory.
+You are answering an agent's question about Catwing brand tokens. Give them the canonical value and the source-of-truth path; do not invent values, do not fall back to memory.
 
 This skill is a flat reference card. The full brand guide is `brand.html` (compiled from `build.py`, deployed at https://catwing-repo.github.io/catwing-brand/). When the question is broader than a single token, point the asker there.
 

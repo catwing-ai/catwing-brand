@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catwing-ai/catwing-brand/main/logo/catwing_icon_128.png" alt="CatWing logo" width="96" />
+  <img src="https://raw.githubusercontent.com/catwing-ai/catwing-brand/main/logo/catwing_icon_128.png" alt="Catwing logo" width="96" />
 </p>
 
 <h1 align="center">Catwing Brand</h1>
 
-<p align="center">Canonical CatWing brand identity — colors, typography, logo variants, iconography, voice, components, interaction patterns. Built as four self-contained HTML pages.</p>
+<p align="center">Canonical Catwing brand identity — colors, typography, logo variants, iconography, voice, components, interaction patterns. Built as four self-contained HTML pages.</p>
 
 ## 🌐 View Online
 

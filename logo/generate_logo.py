@@ -1,5 +1,5 @@
 """
-Phase 2: Generate final CatWing logo set with wordmark.
+Phase 2: Generate final Catwing logo set with wordmark.
 
 Configure CHOSEN_* constants below based on Phase 1 sample sheet selection,
 then run:
@@ -23,8 +23,8 @@ from PIL import Image, ImageDraw, ImageFont
 # Font: one of the names from generate_samples.py
 CHOSEN_FONT = "Outfit Bold"
 
-# Casing: "CatWing" | "CATWING" | "catwing"
-CHOSEN_CASING = "CatWing"
+# Casing: "Catwing" | "CATWING" | "catwing"
+CHOSEN_CASING = "Catwing"
 
 # Text color (on light/transparent bg): "#1a1a2e" | "#3064b6" | "#20b0a5"
 CHOSEN_COLOR = "#1a1a2e"

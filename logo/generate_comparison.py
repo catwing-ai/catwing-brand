@@ -21,7 +21,7 @@ SOURCE_IMG = SCRIPT_DIR / "catwing_logo_1200x1200.png"
 OUTPUT_FILE = SCRIPT_DIR / "comparison.png"
 WIN_FONT_DIR = Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts"
 
-TEXT = "CatWing"
+TEXT = "Catwing"
 TEXT_COLOR = "#1a1a2e"
 TEXT_COLOR_RGBA = (26, 26, 46, 255)
 DARK_BG = "#0f1923"
@@ -225,7 +225,7 @@ def main():
     except Exception:
         title_font = col_font = label_font = desc_font = ImageFont.load_default()
 
-    draw.text((20, 20), "CatWing Logo — Font Comparison (composed)", font=title_font, fill="#1a1a2e")
+    draw.text((20, 20), "Catwing Logo — Font Comparison (composed)", font=title_font, fill="#1a1a2e")
     draw.text((20, 58), "Top 4 fonts | charcoal text | light + dark backgrounds", font=desc_font, fill="#666666")
 
     # Column headers
