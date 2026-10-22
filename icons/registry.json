@@ -1,5 +1,5 @@
 {
-  "version": "3.0",
+  "version": "3.1",
   "lucide_version": "0.468.0",
   "roles": {
     "abcClass": {
@@ -1350,6 +1350,66 @@
         "package"
       ],
       "never_means": "a stock quantity (that is `inventory`) or a SKU code (that is `sku`)"
+    },
+    "productTypeBundle": {
+      "glyph": "group",
+      "source": "lucide/group.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "bundle"
+      ],
+      "never_means": "a product (that is `product`) or a category"
+    },
+    "productTypeCentralStock": {
+      "glyph": "forklift",
+      "source": "lucide/forklift.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "central stock"
+      ],
+      "never_means": "the Warehouse entity (that is `warehouse`) or a transfer"
+    },
+    "productTypeOnRequest": {
+      "glyph": "clipboard-pen",
+      "source": "lucide/clipboard-pen.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "on request"
+      ],
+      "never_means": "a Request Order document (that is `requestOrder`) or editing"
+    },
+    "productTypeOnlineOnly": {
+      "glyph": "monitor-smartphone",
+      "source": "lucide/monitor-smartphone.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "online only"
+      ],
+      "never_means": "a device, the web channel or a region"
+    },
+    "productTypeRegular": {
+      "glyph": "shopping-basket",
+      "source": "lucide/shopping-basket.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "regular"
+      ],
+      "never_means": "a sale or a cart action"
+    },
+    "productTypeService": {
+      "glyph": "concierge-bell",
+      "source": "lucide/concierge-bell.svg",
+      "category": "entity",
+      "keywords": [
+        "product type",
+        "service"
+      ],
+      "never_means": "support or help (that is `support`)"
     },
     "profile": {
       "glyph": "circle-user",
