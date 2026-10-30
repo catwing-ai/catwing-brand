@@ -1411,6 +1411,19 @@
       ],
       "never_means": "support or help (that is `support`)"
     },
+    "productRule": {
+      "glyph": "scroll-text",
+      "source": "lucide/scroll-text.svg",
+      "category": "domain",
+      "keywords": [
+        "product rule",
+        "stocking rule",
+        "transfer rule",
+        "tag rule",
+        "rule"
+      ],
+      "never_means": "a product tag or label itself (that is `labels`) or a planning setting (that is `configuration`)"
+    },
     "profile": {
       "glyph": "circle-user",
       "source": "lucide/circle-user.svg",
